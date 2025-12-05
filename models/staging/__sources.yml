@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: jaffle_shop
-    database: raw
-    schema: jaffle_shop
+    database: internal-sales
+    schema: dbt_sasajima_jaffleshop
     description: E-commerce data
     tables:
       - name: customers
