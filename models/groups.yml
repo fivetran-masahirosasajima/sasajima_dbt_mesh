@@ -1,0 +1,11 @@
+groups:
+  - name: finance
+    owner:
+      name: Firstname Lastname
+      email: finance@jaffleshop.com
+    config:
+      meta:
+        slack: finance-data
+  - name: product
+    owner:
+      email: product@jaffleshop.com
