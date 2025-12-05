@@ -1,8 +1,11 @@
 models:
   - name: fct_orders
+    latest_version: 1
     config:
       contract:
         enforced: true
+      group: finance
+      access: public
     columns:
       - name: order_id
         data_type: string
@@ -32,3 +35,15 @@ models:
         data_type: int
       - name: ordered_year
         data_type: int
+    versions:
+      - v: 1
+        config:
+          alias: fct_orders
+      - v: 2
+        columns:
+          - name: order_amount
+            data_type: float64
+          - name: location_opened_at
+            data_type: date
+          - include: all
+            exclude: [order_total]
